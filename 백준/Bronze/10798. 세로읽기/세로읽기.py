@@ -1,25 +1,6 @@
-length_matrix = [
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [], 
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-]
-for x in range(5):
-    N=input()
-    word = [s for s in N]
-    for y in range(len(N)):
-        length_matrix[y].append(word[y])
+words = [input() for _ in range(5)]
 
-for mat in range(15):
-    print(''.join(length_matrix[mat]), end='')
+for col in range(15):
+    for row in range(5):
+        if col < len(words[row]):
+            print(words[row][col], end='') 
